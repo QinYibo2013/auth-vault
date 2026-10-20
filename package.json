@@ -1,0 +1,11 @@
+{
+  "name": "auth-vault-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name auth-vault",
+    "build": "node --check public/app.mjs && node --check \"functions/api/[[path]].js\""
+  }
+}
