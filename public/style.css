@@ -6,3 +6,5 @@
 dialog{width:calc(100% - 36px);max-width:440px;padding:23px;border:1px solid #dadce0;border-radius:18px;color:inherit}dialog::backdrop{background:#20212466}dialog h2{margin:0 0 16px;font-size:20px}dialog label{display:block;margin:12px 0 5px}#addDialog input,#addDialog textarea{width:100%}.note{font-size:12px;color:#5f6368;line-height:1.6}.actions{display:flex;justify-content:flex-end}.actions button+button{margin-left:8px}#closeDialog{padding:10px;border-radius:10px;background:var(--surface)}
 #toast{position:fixed;z-index:4;bottom:24px;left:50%;transform:translateX(-50%);width:240px;max-width:calc(100% - 108px);padding:15px 17px;margin:0;border-radius:13px;background:#303030;color:white;box-shadow:0 4px 12px #20212430;font-size:14px;overflow-wrap:break-word}
 @media(max-width:480px){#vault{padding-left:12px;padding-right:12px}.app-header h1{font-size:17px;margin:0 5px}#status{font-size:10px}#lockBtn{margin-left:3px}.code{font-size:36px}.dial{margin-right:4px}#searchAccounts{height:46px}}
+
+#cards .card{cursor:pointer}
