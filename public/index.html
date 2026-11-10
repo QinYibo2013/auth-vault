@@ -6,4 +6,11 @@
 <div class="vault-search"><input id="searchAccounts" type="search" placeholder="搜索..." aria-label="搜索账号" autocomplete="off"></div>
 <div id="cards"></div><p id="empty">暂无账号，点右下角的「＋」添加。</p><p id="noMatches" hidden>没有找到匹配的账号。</p>
 <button id="addBtn" aria-label="添加账号" title="添加账号"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12V3" stroke="#ea4335"/><path d="M12 12h9" stroke="#4285f4"/><path d="M12 12v9" stroke="#34a853"/><path d="M12 12H3" stroke="#fbbc05"/></svg></button>
-</section></main><dialog id="addDialog"><form id="addForm"><h2>添加账号</h2><label for="name">名称</label><input id="name" maxlength="100" placeholder="例如：Google"><label for="secret">设置密钥 / otpauth 链接</label><textarea id="secret" rows="3" spellcheck="false" autocomplete="off" required></textarea><p class="note">从账号的安全设置获取密钥。添加后，在原网站输入验证码完成绑定。无需提供 Google 登录密码。</p><p id="addError" role="alert"></p><div class="actions"><button id="saveAccount">保存</button><button type="button" id="closeDialog">取消</button></div></form></dialog><input type="file" id="backupFile" accept=".json,application/json" hidden><p id="toast" role="status" hidden></p><script type="module" src="app.mjs"></script></body></html>
+</section></main><dialog id="addDialog" aria-labelledby="addTitle">
+<header class="add-header"><button type="button" id="closeDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg>返回</button><h2 id="addTitle" tabindex="-1" autofocus>输入账号详情</h2></header>
+<form id="addForm"><div class="add-fields">
+<label for="name">账号名称</label><input id="name" maxlength="100" autocomplete="off">
+<label for="secret">您的密钥</label><input id="secret" spellcheck="false" autocapitalize="off" autocomplete="off" required>
+<p id="addError" role="alert"></p></div>
+<button type="submit" id="saveAccount">添加</button></form>
+</dialog><input type="file" id="backupFile" accept=".json,application/json" hidden><p id="toast" role="status" hidden></p><script type="module" src="app.mjs"></script></body></html>
